@@ -1,4 +1,6 @@
+from gebruiker.gebruiker import Gebruiker
 from gebruiker.gebruiker_profiel import GebruikerProfiel
+from lib.berekeningen import Berekeningen
 
 
 def main():
