@@ -17,7 +17,7 @@ class GebruikerProfiel(Gebruiker, Berekeningen):
     beweging_per_week: str = ''
     doel: str = ''
     doel_gewicht: int = 0
-    calorie_doel: int = 0
+    calorie_doel: list[int] = []
 
     def __init__(self, naam, geslacht, leeftijd, gewicht, lengte, beweging_per_week, doel, doel_gewicht):
         self.naam = naam
