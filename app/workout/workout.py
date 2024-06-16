@@ -1,5 +1,5 @@
-from workouts.activiteit import Activiteit
-from workouts.oefening import Oefening
+from workout.activiteit import Activiteit
+from workout.oefening import Oefening
 import datetime
 
 

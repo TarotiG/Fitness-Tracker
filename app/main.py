@@ -5,6 +5,11 @@ from lib.berekeningen import Berekeningen
 
 def main():
     """Main applicatie"""
+    leestekens = '"~`!@#$%^&*()_+-={}[]:;<>?,./|'
+    
+    # test gebruiker
+    print("Wat voor workout split heb je?")
+    splits = [x for x in input().split()]
     
     tyron = GebruikerProfiel('Tyron Gysbertha', 'Man', 29, 98, 180, 'zwaar', 'afvallen', 90)
     print(f"""
@@ -26,6 +31,9 @@ def main():
 
     Beweging
     Workout split:
+    - {splits[0].strip(leestekens)}
+    - {splits[1].strip(leestekens)}
+    - {splits[2].strip(leestekens)}
     
     VOORBEELD
     Split 1:
@@ -35,6 +43,15 @@ def main():
     Split 2:
       etc.
     
+    Voortgang
+    Gewicht:
+    UITWERKEN
+    
+    Kracht:
+    UITWERKEN
+
+    Voeding:
+    UITWERKEN
     
     """)
 

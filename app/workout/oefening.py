@@ -1,6 +1,8 @@
 from activiteit import Activiteit
+from dataclasses import dataclass
 
 
+@dataclass
 class Oefening(Activiteit):
     id: int
     naam_oefening: str
