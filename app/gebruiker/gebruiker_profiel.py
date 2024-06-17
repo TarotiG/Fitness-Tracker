@@ -4,7 +4,7 @@ from lib.berekeningen import Berekeningen
 
 class GebruikerProfiel(Gebruiker, Berekeningen):
     """
-    Class voor het profiel/data van de gebruiker
+    Class voor het opstellen van het algemene profiel van de gebruiker
     """
     naam: str = ''
     geslacht: str = ''

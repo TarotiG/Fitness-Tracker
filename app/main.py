@@ -1,17 +1,32 @@
 from gebruiker.gebruiker import Gebruiker
 from gebruiker.gebruiker_profiel import GebruikerProfiel
 from lib.berekeningen import Berekeningen
+from workout.activiteit import Activiteit
+from workout.workout import Workout
+from workout.workout_profiel import WorkoutProfiel
+import datetime
+import random
 
 
 def main():
     """Main applicatie"""
-    leestekens = '"~`!@#$%^&*()_+-={}[]:;<>?,./|'
+    # leestekens = '"~`!@#$%^&*()_+-={}[]:;<>?,./|'
+    spiergroepen = ["Borst", "Rug", "Benen", "Armen", "Cardio"]
+
+    splits = [
+        "Borst",
+        "Rug",
+        "Benen",
+        "Cardio"
+    ]
+    workouts = []
+    for i in range(10):
+        workout = Workout(random.randint(1, 100), datetime.datetime.now(), random.choice(spiergroepen), ["Oefening 1", "Oefening 2", "Oefening 3"])
+        workouts.append(workout)
     
-    # test gebruiker
-    print("Wat voor workout split heb je?")
-    splits = [x for x in input().split()]
+    # test gebruiker voor data
+    tyron = WorkoutProfiel('Tyron Gysbertha', 'Man', 29, 98, 180, 'zwaar', 'afvallen', 90, splits, workouts)
     
-    tyron = GebruikerProfiel('Tyron Gysbertha', 'Man', 29, 98, 180, 'zwaar', 'afvallen', 90)
     print(f"""
     Persoonsgegevens
     Naam:               {tyron.naam}
@@ -30,18 +45,14 @@ def main():
     Caloriebehoefte obv doel:    {tyron.calorie_doel[1]} Kcal (Uiterste grens)
 
     Beweging
-    Workout split:
-    - {splits[0].strip(leestekens)}
-    - {splits[1].strip(leestekens)}
-    - {splits[2].strip(leestekens)}
+    Workout split: {random.choice(splits)}
     
-    VOORBEELD
-    Split 1:
-    - Oefening 1
-    - Oefening 2
-    - Oefening 3
-    Split 2:
-      etc.
+    Workout:
+    Spiergroep: {tyron.workouts[0].spier_groep}
+    Oefeningen voor deze spiergroep:
+    - {tyron.workouts[0].oefeningen[0]}
+    - {tyron.workouts[0].oefeningen[1]}
+    - {tyron.workouts[0].oefeningen[2]}
     
     Voortgang
     Gewicht:

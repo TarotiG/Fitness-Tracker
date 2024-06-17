@@ -6,4 +6,4 @@ class Activiteit:
     id: int
     naam: str
     beschrijving: str
-  
+    tijd: int

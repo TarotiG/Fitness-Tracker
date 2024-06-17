@@ -1,15 +1,21 @@
-from workout.activiteit import Activiteit
 from workout.oefening import Oefening
 import datetime
 
 
-class Workout(Activiteit):
+class Workout:
     id: int
     workout_datum: datetime.datetime
-    workout_split: list[str]
+    spier_groep: str
     oefeningen: list[Oefening]
     totale_tijd: int
     calorieen_verbrand: int
+
+    def __init__(self, id, workout_datum, spier_groep, oefeningen):
+        self.id = id
+        self.workout_datum = workout_datum
+        self.spier_groep = spier_groep
+        self.oefeningen = oefeningen
+        
 
     def get_oefeningen(self):
         raise NotImplementedError("Specs uitschrijven")
