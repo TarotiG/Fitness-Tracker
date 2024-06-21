@@ -1,11 +1,13 @@
+import datetime
+import random
 from gebruiker.gebruiker import Gebruiker
 from gebruiker.gebruiker_profiel import GebruikerProfiel
 from lib.berekeningen import Berekeningen
 from workout.activiteit import Activiteit
 from workout.workout import Workout
 from workout.workout_profiel import WorkoutProfiel
-import datetime
-import random
+from logboek.logboek import Logboek
+
 
 
 def main():
@@ -53,6 +55,12 @@ def main():
     - {tyron.workouts[0].oefeningen[0]}
     - {tyron.workouts[0].oefeningen[1]}
     - {tyron.workouts[0].oefeningen[2]}
+
+    Logboek:
+    Datum: {tyron.logboek.datum}
+
+    Type        Oefening        Gewicht        Sets        Herhalingen        Rust        Afgerond        Effort        Opmerkingen
+    
     
     Voortgang
     Gewicht:

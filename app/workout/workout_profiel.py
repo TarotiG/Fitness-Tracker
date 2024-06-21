@@ -6,7 +6,7 @@ from workout.workout import Workout
 from workout.workout_split import WorkoutSplit
 from workout.oefening import Oefening
 from rapportage.rapportage import Rapportage
-# from logboek.logboek import Logboek
+from logboek.logboek import Logboek
 
 
 class WorkoutProfiel(GebruikerProfiel):
@@ -19,7 +19,7 @@ class WorkoutProfiel(GebruikerProfiel):
     """
     workout_splits: list[WorkoutSplit]
     workouts: list[Workout]
-    # logboek: Logboek
+    logboek: Logboek
     
     def __init__(self, naam, geslacht, leeftijd, gewicht, lengte, beweging_per_week, doel, doel_gewicht,workout_splits, workouts):
         super().__init__(naam, geslacht, leeftijd, gewicht, lengte, beweging_per_week, doel, doel_gewicht)

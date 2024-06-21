@@ -13,6 +13,9 @@ class Oefening(Activiteit):
     - aantal_sets: Aantal sets.
     - aantal_herhalingen: Aantal herhalingen.
     - rust_tijd_per_set: Tijd tussen sets in seconden.
+    - gewicht: Gewicht van de oefening (in kg).
+    - afgerond: Boolean waarde of de oefening is afgerond.
+    - effort: Een waarde waarmee de gebruiker aangeeft hoeveel effort de oefening heeft gekost
     """
     id: int
     naam_oefening: str
@@ -21,3 +24,6 @@ class Oefening(Activiteit):
     aantal_sets: int
     aantal_herhalingen: int
     rust_tijd_per_set: int
+    gewicht: int
+    afgerond: bool
+    effort: str
